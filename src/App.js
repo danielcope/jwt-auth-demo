@@ -5,7 +5,7 @@ function App() {
   const hit = async () => {
     await axios
       .get("/hit")
-      .then((res) => console.log(res))
+      .then((res) => console.log(res.data))
       .catch((err) => console.log(err));
   };
 
