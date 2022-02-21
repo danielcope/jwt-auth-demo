@@ -5,11 +5,19 @@ const massive = require("massive");
 
 const app = express();
 const authCtrl = require("./controllers/authCtrl");
+const random = require("./controllers/random");
 
 const { SERVER_PORT, CONNECTION_STRING } = process.env;
 
-app.get("/hit", authCtrl.hit);
-app.get("/get-stuff", authCtrl.something);
+// #region this is for testing purposes
+app.get("/hit", random.hit);
+app.get("/get-stuff", random.something);
+
+// #endregion
+
+// #region Authentication endpoint
+  
+// #endregion
 
 massive({
   connectionString: CONNECTION_STRING,
