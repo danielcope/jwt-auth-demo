@@ -1,13 +1,9 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 .bank {
   font-family: "Libre Baskerville", serif;
   font-family: "Source Sans Pro", sans-serif;
-  color: #66101f;
-  color: #855a5c;
-  color: #8a8e91;
-  color: #b8d4e3;
-  color: #eeffdb;
+  color: #cb8589;
+  color: #2a324b;
+  color: #767b91;
+  color: #c7ccdb;
+  color: #e1e5ee;
 }

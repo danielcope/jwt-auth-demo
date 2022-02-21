@@ -8,7 +8,8 @@ const authCtrl = require("./controllers/authCtrl");
 
 const { SERVER_PORT, CONNECTION_STRING } = process.env;
 
-app.get("/hit", authCtrl.something);
+app.get("/hit", authCtrl.hit);
+app.get("/get-stuff", authCtrl.something);
 
 massive({
   connectionString: CONNECTION_STRING,
@@ -20,7 +21,7 @@ massive({
     app.set("db", dbInst);
 
     app.listen(SERVER_PORT, () =>
-      console.log(`Server running on port` + " " + SERVER_PORT)
+      console.log(`Server running on port: ${SERVER_PORT}`)
     );
   })
   .catch((err) => console.log(err));

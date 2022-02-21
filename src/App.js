@@ -1,17 +1,11 @@
-import axios from "axios";
 import "./css/App.css";
+import "./index.css";
+import routes from "./routes";
 
 function App() {
-  const hit = async () => {
-    await axios
-      .get("/hit")
-      .then((res) => console.log(res.data))
-      .catch((err) => console.log(err));
-  };
-
   return (
-    <div className="App">
-      <button onClick={() => hit()}>Hit</button>
+    <div className="App w-screen h-screen flex flex-col justify-center items-center content-center">
+      {routes}
     </div>
   );
 }
