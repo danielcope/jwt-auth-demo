@@ -24,6 +24,7 @@ const Counter = () => {
         <button onClick={() => dispatch(increment())}>Increment</button>
         <span>{count}</span>
         <button onClick={() => dispatch(decrement())}>decrement</button>
+        {data.payload ? <span>{data.payload[0].name}</span> : <span></span>}
         <button onClick={() => getInfo()}>get</button>
       </div>
     </div>
